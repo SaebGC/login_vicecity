@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--club-bg);
+  --color-foreground: var(--text-main);
+  
+  --color-club-bg: var(--club-bg);
+  --color-club-surface: var(--club-surface);
+  --color-club-primary: var(--club-primary);
+  --color-club-accent: var(--club-accent);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-shadow-color: var(--shadow-color);
+  
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --club-bg: #f8f9f4; /* Light surface for main bg */
+  --club-surface: #ffffff;
+  --club-primary: #B0BF3F; /* Lime green/olive */
+  --club-accent: #000000; /* Black */
+  --text-main: #4C591C; /* Dark green */
+  --text-muted: #826E77; /* Mauve/gray */
+  --shadow-color: rgba(76, 89, 28, 0.1);
+  
+  --font-heading: 'Zalando Sans Expanded', system-ui, sans-serif;
+  --font-body: 'Zalando Sans', system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--club-bg);
+  color: var(--text-main);
+  font-family: var(--font-body);
 }
